@@ -18,8 +18,10 @@ import { Pagination } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import { Rate } from "antd";
+import { useNavigate } from "react-router-dom";
 
 export const HomePage = () => {
+  const navigate = useNavigate();
   return (
     <div className="position-relative">
       <nav
@@ -58,11 +60,11 @@ export const HomePage = () => {
                 placeholder="Поиск по товарам"
               />
             </div>
-            <div className="d-flex align-items-center gap-3">
+            <div className="d-flex align-items-center gap-3 mt-3">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
-                height="24"
+                height="24" 
                 fill="currentColor"
                 class="bi bi-cart3"
                 viewBox="0 0 16 16"
@@ -274,6 +276,7 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
+            onClick={()=>{navigate('/about-product')}}
           >
             <div className="p-3">
               <div className="d-flex align-items-center justify-content-between">
@@ -596,6 +599,8 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
+            onClick={()=>{navigate('/about-product')}}
+
           >
             <div className="p-3">
               <div className="d-flex align-items-center justify-content-between">
@@ -918,6 +923,8 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
+            onClick={()=>{navigate('/about-product')}}
+
           >
             <div className="p-3">
               <div className="d-flex align-items-center justify-content-between">
@@ -1240,6 +1247,8 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
+            onClick={()=>{navigate('/about-product')}}
+
           >
             <div className="p-3">
               <div className="d-flex align-items-center justify-content-between">
@@ -1562,6 +1571,8 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
+            onClick={()=>{navigate('/about-product')}}
+
           >
             <div className="p-3">
               <div className="d-flex align-items-center justify-content-between">

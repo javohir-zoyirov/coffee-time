@@ -661,118 +661,126 @@ export const AboutProduct = () => {
         </div>
       </div>
       <h2 className="fw-bold container-fluid mx-auto my-5">Как готовить?</h2>
-      <div className="container-fluid mx-auto flex-wrap d-flex gap-3 justify-content-between align-items-center mt-5">
+      <div className="container-fluid mx-auto row mt-5">
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Турка</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle1}
               alt="#"
             />
           </div>
         </div>
+        </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Френч-пресс</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle2}
               alt="#"
             />
           </div>
         </div>
+        </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Мока</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle3}
               alt="#"
             />
           </div>
         </div>
+        </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Эспрессо</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle4}
               alt="#"
             />
           </div>
         </div>
+        </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Воронка</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle5}
               alt="#"
             />
           </div>
         </div>
+        </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Аэропресс</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle6}
               alt="#"
             />
           </div>
         </div>
-        <div
+        </div>
+       <div className="col-lg-2 col-md-3 col-sm-4 col-6">
+       <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Чашка</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle7}
               alt="#"
             />
           </div>
         </div>
+       </div>
+        <div className="col-lg-2 col-md-3 col-sm-4 col-6">
         <div
           className="text-center p-4 bg-white rounded-4 mb-4"
-          style={{ boxShadow: "0px 0px 30px 0px #95959540" }}
+          style={{ boxShadow: "0px 0px 30px 0px #95959540",maxHeight:"200px"}}
         >
           <p>Автомат</p>
           <div>
             <img
-              style={{ width: "80px", height: "80px" }}
-              className="w-100"
+              className=""
               src={kettle8}
               alt="#"
             />
           </div>
+        </div>
         </div>
       </div>
 
