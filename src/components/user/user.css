@@ -1,0 +1,9 @@
+.cofe3{
+ background-image: url("../image/3-cofe.png") !important;
+ background-size: cover;
+ display: flex;
+ justify-content: center;
+ color: white;
+ padding: 20px;
+ border-radius: 20px;
+}

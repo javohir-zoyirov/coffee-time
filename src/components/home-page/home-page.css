@@ -1,0 +1,61 @@
+.cofebtn{
+    visibility: hidden;
+
+}
+.cofe-card:hover{
+
+    .cofebtn{
+        visibility: visible;
+        opacity: 1;
+        transition: visibility 0s 0.2s, opacity 0.2s ease-in-out;
+    }
+    .image{
+     transform: scale(1.2);
+     transition: 1s;
+    }
+}
+html,
+body {
+  position: relative;
+  height: 100%;
+}
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0;
+}
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .swiper-slide {
+    font-size: 18px;
+    background: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  .cofe-tarobika{
+    background-image: url(../image/Group\ 23-2.png);
+    background-size: 100% 100%;
+  }
+  .machine{
+    background-image: url(../image/image\ 10.png);
+    background-size: cover; 
+    background-position: "0 -500px";
+    padding: 50px 0 50px 0;
+  }
+  .tanzania {
+    background-image: url(../image/Rectangle\ 34.png);
+  }

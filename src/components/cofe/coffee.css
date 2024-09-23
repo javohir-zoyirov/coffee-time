@@ -1,0 +1,31 @@
+ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 18px;
+    padding-bottom: 10px !important;
+
+}
+ul li {
+    list-style: none;
+}
+ul li a:hover{
+    color: #F9B300;
+    transition: 0.3s;
+}
+svg:hover{
+    color: #F9B300;
+    transition: 0.3s;
+}
+.header {
+    background-color: #F9B300; /* Orqa fon rangi */
+    background-size: cover;
+    background-position: center;
+    padding: 20px 0;
+    width: 100%;
+    position: relative; /* Bu div fonni qabul qiladi */
+}
+.form-check-input:checked{
+    background-color: #F9B300 !important;
+    border-color: #F9B300 !important;
+}
+
