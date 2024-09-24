@@ -19,72 +19,16 @@ import "swiper/css";
 import "swiper/css/pagination";
 import { Rate } from "antd";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import { Navbar } from "../navbar";
 
 export const HomePage = () => {
   const navigate = useNavigate();
+  const [click, setClick] = useState(null);
+  const [navbarIcon, setNavbarIcon] = useState("");
   return (
     <div className="position-relative">
-      <nav
-        class="navbar navbar-expand-lg"
-        style={{
-          background: "#FFFFFF",
-          boxShadow: "0px 5px 20px 0px #9D9D9D40",
-          position: "sticky",
-          top: "0",
-          zIndex: "3 ",
-        }}
-      >
-        <div class="container-fluid">
-          <div class="navbar-brand">
-            <img style={{ width: "150px", height: "70px" }} src={logo} />
-          </div>
-          <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon"></span>
-          </button>
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <div className="w-100 px-4">
-              <input
-                style={{
-                  boxShadow: "0px 0px 20px 0px #9D9D9D40",
-                  color: "#C4C4C4",
-                }}
-                className="form-control rounded-5"
-                placeholder="Поиск по товарам"
-              />
-            </div>
-            <div className="d-flex align-items-center gap-3 mt-3">
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24" 
-                fill="currentColor"
-                class="bi bi-cart3"
-                viewBox="0 0 16 16"
-              >
-                <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="currentColor"
-                class="bi bi-person"
-                viewBox="0 0 16 16"
-              >
-                <path d="M8 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6m2-3a2 2 0 1 1-4 0 2 2 0 0 1 4 0m4 8c0 1-1 1-1 1H3s-1 0-1-1 1-4 6-4 6 3 6 4m-1-.004c-.001-.246-.154-.986-.832-1.664C11.516 10.68 10.289 10 8 10s-3.516.68-4.168 1.332c-.678.678-.83 1.418-.832 1.664z" />
-              </svg>
-            </div>
-          </div>
-        </div>
-      </nav>
+      <Navbar/>
       <img
         className="w-25"
         style={{ position: "absolute", top: "0", right: "0", zIndex: "-1" }}
@@ -104,22 +48,23 @@ export const HomePage = () => {
             <div className="my-5">
               <p className="fs-5">
                 Кофе Калининградской обжарки из разных стран произрастания c
-                доставкой на дом.{" "}
+                доставкой на дом.
               </p>
               <p>
                 Мы обжариваем кофе{" "}
                 <span className="fw-bold">каждые выходные.</span>
               </p>
             </div>
-            <button
+            <a
+              href="#catalog"
               style={{ background: "#F9B300" }}
               className="btn text-white fw-bold rounded-1"
             >
               Посмотреть каталог
-            </button>
+            </a>
           </div>
         </div>
-        <div className="col-lg-6">
+        <div className="col-lg-6  d-lg-block d-md-block d-none">
           <div style={{ position: "relative" }}>
             <img
               style={{ zIndex: 1, position: "absolute" }}
@@ -137,10 +82,10 @@ export const HomePage = () => {
         </div>
       </div>
 
-      <div className="container-fluid mx-auto mt-5 pt-5">
+      <div id="catalog" className="container-fluid mx-auto mt-5 pt-5">
         <h1 className="fw-bold my-5">Каталоги нашей продукции</h1>
         <div className="row mb-5">
-          <div className="col-lg-3">
+          <div className="col-lg-3 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -162,7 +107,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -184,7 +129,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -210,7 +155,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3">
+          <div className="col-lg-3 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -276,10 +221,14 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
-            onClick={()=>{navigate('/about-product')}}
           >
-            <div className="p-3">
-              <div className="d-flex align-items-center justify-content-between">
+            <div className="p-3" style={{ cursor: "pointer" }}>
+              <div
+                className="d-flex align-items-center justify-content-between"
+                onClick={() => {
+                  navigate("/about-product");
+                }}
+              >
                 <div>
                   <span
                     className="p-3"
@@ -589,6 +538,339 @@ export const HomePage = () => {
                   <button
                     style={{ background: "#F9B300" }}
                     className="btn fw-bold text-white"
+                    onClick={() => {
+                      navigate("/basket");
+                    }}
+                  >
+                    B корзину
+                  </button>
+                </div>
+              </div>
+            </div>
+          </SwiperSlide>
+          <SwiperSlide
+            style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
+            className="rounded-3 position-relative"
+          >
+            <div className="p-3" style={{ cursor: "pointer" }}>
+              <div
+                onClick={() => {
+                  navigate("/about-product");
+                }}
+                className="d-flex align-items-center justify-content-between"
+              >
+                <div>
+                  <span
+                    className="p-3"
+                    style={{ background: "#F9B300", borderRadius: "50%" }}
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      width="24"
+                      height="24"
+                      fill="currentColor"
+                      class="bi bi-percent text-black"
+                      viewBox="0 0 16 16"
+                    >
+                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
+                    </svg>
+                  </span>
+                  <p style={{ color: "#F9B300" }} className="fw-bold mt-4">
+                    Скидки
+                  </p>
+                </div>
+                <div
+                  style={{
+                    border: "1px solid #F9B300",
+                    background: "#FFF7E1",
+                    display: "inline",
+                  }}
+                  className="py-1 px-3 rounded"
+                >
+                  250 г.{" "}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    width="16"
+                    height="16"
+                    fill="currentColor"
+                    class="bi bi-chevron-down"
+                    viewBox="0 0 16 16"
+                  >
+                    <path
+                      fill-rule="evenodd"
+                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
+                    />
+                  </svg>
+                </div>
+              </div>
+
+              <div className="d-flex align-items-center gap-3">
+                <div>
+                  <img className="w-100" src={image5} alt="#" />
+                </div>
+                <div className="">
+                  <Rate disabled defaultValue={4} />
+                  <p>
+                    <span className="fw-bold">4.0</span>
+                    <span style={{ color: "#5B5B5B" }} className="ms-2">
+                      (32 отзыва)
+                    </span>
+                  </p>
+                  <div className="d-flex align-items-center justify-content-between">
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                    <img
+                      style={{ width: "19px" }}
+                      className=""
+                      src={torabika}
+                    />
+                  </div>
+                  <p>Кислинка</p>
+                  <div className="d-flex align-items-center gap-1">
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                  </div>
+                  <p className="mt-2">Горчинка</p>
+                  <div className="d-flex align-items-center gap-1">
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                  </div>
+                  <p className="mt-2">Насыщенность</p>
+                  <div className="d-flex align-items-center gap-1">
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F9B300",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                    <div
+                      style={{
+                        backgroundColor: "#F0F0F0",
+                        width: "13px",
+                        height: "13px",
+                        borderRadius: "50%",
+                      }}
+                    ></div>
+                  </div>
+                </div>
+              </div>
+              <div className="mt-4">
+                <h3 style={{ color: "#222222" }} className="fw-bold">
+                  Colombia Supremo
+                </h3>
+                <p style={{ color: "#222222" }}>
+                  Свежеобжаренный кофе - описание товара, вкус, аромат
+                </p>
+                <h3 className="" style={{ color: "#C6C6C6" }}>
+                  350 ₽
+                </h3>
+                <div className="d-flex align-items-center justify-content-between">
+                  <h3 className="fw-bold" style={{ color: "#222222" }}>
+                    250 ₽
+                  </h3>
+                  <button
+                    style={{ background: "#F9B300" }}
+                    className="btn fw-bold text-white"
+                    onClick={() => {
+                      navigate("/basket");
+                    }}
                   >
                     В корзину
                   </button>
@@ -599,11 +881,14 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
-            onClick={()=>{navigate('/about-product')}}
-
           >
-            <div className="p-3">
-              <div className="d-flex align-items-center justify-content-between">
+            <div className="p-3" style={{ cursor: "pointer" }}>
+              <div
+                onClick={() => {
+                  navigate("/about-product");
+                }}
+                className="d-flex align-items-center justify-content-between"
+              >
                 <div>
                   <span
                     className="p-3"
@@ -913,6 +1198,9 @@ export const HomePage = () => {
                   <button
                     style={{ background: "#F9B300" }}
                     className="btn fw-bold text-white"
+                    onClick={() => {
+                      navigate("/basket");
+                    }}
                   >
                     В корзину
                   </button>
@@ -923,11 +1211,14 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
-            onClick={()=>{navigate('/about-product')}}
-
           >
-            <div className="p-3">
-              <div className="d-flex align-items-center justify-content-between">
+            <div className="p-3" style={{ cursor: "pointer" }}>
+              <div
+                onClick={() => {
+                  navigate("/about-product");
+                }}
+                className="d-flex align-items-center justify-content-between"
+              >
                 <div>
                   <span
                     className="p-3"
@@ -1237,6 +1528,9 @@ export const HomePage = () => {
                   <button
                     style={{ background: "#F9B300" }}
                     className="btn fw-bold text-white"
+                    onClick={() => {
+                      navigate("/basket");
+                    }}
                   >
                     В корзину
                   </button>
@@ -1247,11 +1541,14 @@ export const HomePage = () => {
           <SwiperSlide
             style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
             className="rounded-3 position-relative"
-            onClick={()=>{navigate('/about-product')}}
-
           >
-            <div className="p-3">
-              <div className="d-flex align-items-center justify-content-between">
+            <div className="p-3" style={{ cursor: "pointer" }}>
+              <div
+                onClick={() => {
+                  navigate("/about-product");
+                }}
+                className="d-flex align-items-center justify-content-between"
+              >
                 <div>
                   <span
                     className="p-3"
@@ -1561,330 +1858,9 @@ export const HomePage = () => {
                   <button
                     style={{ background: "#F9B300" }}
                     className="btn fw-bold text-white"
-                  >
-                    В корзину
-                  </button>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide
-            style={{ boxShadow: "0px 0px 20px 0px #92929240" }}
-            className="rounded-3 position-relative"
-            onClick={()=>{navigate('/about-product')}}
-
-          >
-            <div className="p-3">
-              <div className="d-flex align-items-center justify-content-between">
-                <div>
-                  <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span>
-                  <p style={{ color: "#F9B300" }} className="fw-bold mt-4">
-                    Скидки
-                  </p>
-                </div>
-                <div
-                  style={{
-                    border: "1px solid #F9B300",
-                    background: "#FFF7E1",
-                    display: "inline",
-                  }}
-                  className="py-1 px-3 rounded"
-                >
-                  250 г.{" "}
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="16"
-                    height="16"
-                    fill="currentColor"
-                    class="bi bi-chevron-down"
-                    viewBox="0 0 16 16"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="d-flex align-items-center gap-3">
-                <div>
-                  <img className="w-100" src={image5} alt="#" />
-                </div>
-                <div className="">
-                  <Rate disabled defaultValue={4} />
-                  <p>
-                    <span className="fw-bold">4.0</span>
-                    <span style={{ color: "#5B5B5B" }} className="ms-2">
-                      (32 отзыва)
-                    </span>
-                  </p>
-                  <div className="d-flex align-items-center justify-content-between">
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                    <img
-                      style={{ width: "19px" }}
-                      className=""
-                      src={torabika}
-                    />
-                  </div>
-                  <p>Кислинка</p>
-                  <div className="d-flex align-items-center gap-1">
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                  </div>
-                  <p className="mt-2">Горчинка</p>
-                  <div className="d-flex align-items-center gap-1">
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                  </div>
-                  <p className="mt-2">Насыщенность</p>
-                  <div className="d-flex align-items-center gap-1">
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F9B300",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                    <div
-                      style={{
-                        backgroundColor: "#F0F0F0",
-                        width: "13px",
-                        height: "13px",
-                        borderRadius: "50%",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-              </div>
-              <div className="mt-4">
-                <h3 style={{ color: "#222222" }} className="fw-bold">
-                  Colombia Supremo
-                </h3>
-                <p style={{ color: "#222222" }}>
-                  Свежеобжаренный кофе - описание товара, вкус, аромат
-                </p>
-                <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3>
-                <div className="d-flex align-items-center justify-content-between">
-                  <h3 className="fw-bold" style={{ color: "#222222" }}>
-                    250 ₽
-                  </h3>
-                  <button
-                    style={{ background: "#F9B300" }}
-                    className="btn fw-bold text-white"
+                    onClick={() => {
+                      navigate("/basket");
+                    }}
                   >
                     В корзину
                   </button>
@@ -1895,10 +1871,10 @@ export const HomePage = () => {
         </Swiper>
       </div>
 
-      <div className="cofe-tarobika">
+      <div className="cofe-tarobika mb-4">
         <div className="container-fluid mx-auto mt-5 pt-5">
-          <div className="d-flex align-items-center justify-content-between">
-            <div className="w-50">
+          <div className="d-flex align-items-center justify-content-between   ">
+            <div className="w-50 d-lg-block d-md-block d-none">
               <img className="w-100" src={tarobika} />
               <img
                 style={{ marginTop: "-260px" }}
@@ -2028,8 +2004,8 @@ export const HomePage = () => {
       <div className="tanzania">
         <div className="container-fluid mx-auto my-5">
           <h2 className="fw-bold pt-5">Новости компании</h2>
-          <div className="row">
-            <div className="col-lg-8 col-12">
+          <div className="row mt-3">
+            <div className="col-lg-8 col-12 mb-4">
               <div
                 className="d-flex align-items-stretch justify-content-between"
                 style={{
@@ -2058,7 +2034,7 @@ export const HomePage = () => {
                   </h5>
                   <p>
                     Танзания – красивая африканская страна. Именно здесь
-                    расположены легендарные географические объекты – вулкан
+                    расположены легендарные географические объекты - вулкан
                     Килиманджаро и озеро Виктория.
                   </p>
                   <p>
@@ -2087,7 +2063,7 @@ export const HomePage = () => {
                 </div>
               </div>
             </div>
-            <div className="col-lg-4 col-12">
+            <div className="col-lg-4 col-12 mb-4">
               <div
                 className="p-5 bg-white"
                 style={{
@@ -2126,7 +2102,7 @@ export const HomePage = () => {
           </div>
 
           <div className="row mt-4">
-            <div className="col-lg-4 col-12">
+            <div className="col-lg-4 col-12 mb-4">
               <div
                 className="p-5 bg-white"
                 style={{
@@ -2162,7 +2138,7 @@ export const HomePage = () => {
                 </a>
               </div>
             </div>
-            <div className="col-lg-8 col-12">
+            <div className="col-lg-8 col-12 mb-4">
               <div
                 className="d-flex align-items-stretch justify-content-between"
                 style={{
@@ -2233,7 +2209,7 @@ export const HomePage = () => {
         <div className="position-relative w-75 my-3">
           <input
             className="form-control w-100 rounded-5"
-            style={{ paddingRight: "120px", background:"#F3F3F3" }}
+            style={{ paddingRight: "120px", background: "#F3F3F3" }}
             placeholder="Ваш email"
           />
           <button
@@ -2256,16 +2232,22 @@ export const HomePage = () => {
       </div>
 
       <div className="d-flex align-items-center justify-content-between flex-wrap container-fluid mx-auto my-5">
-        <img src={logo} alt="#"/>
+        <img src={logo} alt="#" />
         <ul className="d-flex align-items-center flex-wrap gap-5 fw-bold">
-          <li style={{listStyle:"none"}}>
-            <a style={{textDecoration:"none",color:"black"}} href="#">Каталог товаров</a>
+          <li style={{ listStyle: "none" }}>
+            <a style={{ textDecoration: "none", color: "black" }} href="#">
+              Каталог товаров
+            </a>
           </li>
-          <li style={{listStyle:"none"}}>
-            <a style={{textDecoration:"none", color:"black"}} href="#">Блог</a>
+          <li style={{ listStyle: "none" }}>
+            <a style={{ textDecoration: "none", color: "black" }} href="#">
+              Блог
+            </a>
           </li>
-          <li style={{listStyle:"none"}}>
-            <a style={{textDecoration:"none",color:"black"}} href="#">Контакты</a>
+          <li style={{ listStyle: "none" }}>
+            <a style={{ textDecoration: "none", color: "black" }} href="#">
+              Контакты
+            </a>
           </li>
         </ul>
       </div>

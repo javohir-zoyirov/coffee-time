@@ -7,13 +7,14 @@ import choy3 from "../image/choy3.png";
 import choy4 from "../image/choy4.png";
 import choy5 from "../image/choy5.png";
 import { Rate } from "antd";
+import { Navbar } from "../navbar";
 export const Tea = () => {
   const navigate = useNavigate();
   const [click, setClick] = useState();
   const [navbarIcon, setNavbarIcon] = useState("");
   return (
     <>
-      <nav
+      {/* <nav
         class="navbar navbar-expand-lg"
         style={{
           background: "#FFFFFF",
@@ -78,23 +79,50 @@ export const Tea = () => {
             ) : (
               <div className="w-100">
                 <ul className="d-flex align-items-center p-0 m-0 gap-5 justify-content-center">
-                  <li
+                <li
                     onClick={() => {
                       setClick(1);
                     }}
+                    className=" dropdown"
                   >
                     <a
                       style={
                         click === 1 ? { borderBottom: "3px solid #F9B300" } : {}
                       }
                       href="#"
+                      className=" dropdown-toggle"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
                     >
                       Каталог товаров
                     </a>
+                    <ul class="dropdown-menu">
+                      <li onClick={()=>{navigate("/coffee")}}>
+                        <a class="dropdown-item" href="#">
+                        Свежеобжаренный кофе
+                        </a>
+                      </li>
+                      <li onClick={()=>{navigate("/tea")}}>
+                        <a class="dropdown-item" href="#">
+                        Чай и кофейные напитки
+                        </a>
+                      </li>
+                      <li onClick={()=>{navigate("/eat")}}>
+                        <a class="dropdown-item" href="#">
+                        Продукция для вендинга
+                        </a>
+                      </li>
+                      <li onClick={()=>{navigate("/healthy")}}>
+                        <a class="dropdown-item" href="#">
+                        Здоровое питание
+                        </a>
+                      </li>
+                    </ul>
                   </li>
                   <li
                     onClick={() => {
                       setClick(2);
+                      navigate("/blog")
                     }}
                   >
                     <a
@@ -139,6 +167,7 @@ export const Tea = () => {
                 <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
               </svg>
               <svg
+              onClick={() => {navigate('/basket')}}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -150,6 +179,7 @@ export const Tea = () => {
                 <path d="M0 1.5A.5.5 0 0 1 .5 1H2a.5.5 0 0 1 .485.379L2.89 3H14.5a.5.5 0 0 1 .49.598l-1 5a.5.5 0 0 1-.465.401l-9.397.472L4.415 11H13a.5.5 0 0 1 0 1H4a.5.5 0 0 1-.491-.408L2.01 3.607 1.61 2H.5a.5.5 0 0 1-.5-.5M3.102 4l.84 4.479 9.144-.459L13.89 4zM5 12a2 2 0 1 0 0 4 2 2 0 0 0 0-4m7 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4m-7 1a1 1 0 1 1 0 2 1 1 0 0 1 0-2m7 0a1 1 0 1 1 0 2 1 1 0 0 1 0-2" />
               </svg>
               <svg
+              onClick={()=>{navigate("/user")}}
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
                 height="24"
@@ -163,7 +193,8 @@ export const Tea = () => {
             </div>
           </div>
         </div>
-      </nav>
+      </nav> */}
+      <Navbar/>
       <div
         style={{ background: "#F9B300" }}
         className="py-5 container-fluid mx-auto"
