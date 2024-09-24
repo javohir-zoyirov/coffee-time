@@ -11,9 +11,6 @@ import machine from "../image/cofe-machine.png"
 import { Rate } from "antd";
 import { Navbar } from "../navbar";
 export const Eat = () => {
-  const navigate = useNavigate();
-  const [click, setClick] = useState();
-  const [navbarIcon, setNavbarIcon] = useState("");
   return (
     <>
      <Navbar/>

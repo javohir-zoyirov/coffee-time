@@ -2002,7 +2002,7 @@ export const HomePage = () => {
       </div>
 
       <div className="tanzania">
-        <div className="container-fluid mx-auto my-5">
+        <div className="container-fluid mx-auto mb-5">
           <h2 className="fw-bold pt-5">Новости компании</h2>
           <div className="row mt-3">
             <div className="col-lg-8 col-12 mb-4">

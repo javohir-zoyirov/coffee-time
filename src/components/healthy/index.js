@@ -12,8 +12,6 @@ import { Rate } from "antd";
 import { Navbar } from "../navbar";
 export const Healthy = () => {
   const navigate = useNavigate();
-  const [click, setClick] = useState();
-  const [navbarIcon, setNavbarIcon] = useState("");
   return (
     <>
       <Navbar/>
@@ -96,6 +94,7 @@ export const Healthy = () => {
       <div className="row container-fluid mx-auto mt-5">
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -130,9 +129,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -140,6 +140,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -174,9 +175,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -184,6 +186,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -218,9 +221,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -228,6 +232,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -262,9 +267,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -272,6 +278,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -306,9 +313,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -316,6 +324,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -350,9 +359,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -360,6 +370,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -394,9 +405,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>
@@ -404,6 +416,7 @@ export const Healthy = () => {
         </div>
         <div className="col-lg-3 mb-4">
           <div className="bg-white p-3 rounded-3">
+            <div style={{cursor:"pointer"}} onClick={()=>{navigate("/about-product")}}>
             <div className="d-flex align-items-center justify-content-between">
               <Rate disabled defaultValue={4} />
               <span
@@ -438,9 +451,10 @@ export const Healthy = () => {
             </div>
             <p className="fw-bold fs-5 mt-2">Наименование товара</p>
             <p>Черный чай</p>
+            </div>
             <div className="d-flex align-items-center justify-content-between">
               <p className="fw-bold fs-3 p-0 m-0">250 ₽</p>
-              <button style={{ background: "#F9B300" }} className="btn fw-bold text-white">
+              <button onClick={()=>{navigate("/basket")}} style={{ background: "#F9B300" }} className="btn fw-bold text-white">
                 В корзину
               </button>
             </div>

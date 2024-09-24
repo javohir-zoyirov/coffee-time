@@ -762,24 +762,9 @@ export const Cofe = () => {
       </a>
       <div className="row  container-fluid mx-auto mt-5">
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -809,7 +794,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -1039,9 +1024,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -1049,6 +1031,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -1057,24 +1040,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -1104,7 +1072,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -1334,9 +1302,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -1344,6 +1309,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -1352,24 +1318,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -1399,7 +1350,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -1629,9 +1580,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -1639,6 +1587,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -1647,24 +1596,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -1694,7 +1628,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -1924,9 +1858,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -1934,6 +1865,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -1942,24 +1874,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -1989,7 +1906,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -2219,9 +2136,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -2229,6 +2143,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -2237,24 +2152,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -2284,7 +2184,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -2514,9 +2414,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -2524,6 +2421,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -2532,24 +2430,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -2579,7 +2462,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -2809,9 +2692,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -2819,6 +2699,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -2827,24 +2708,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -2874,7 +2740,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -3104,9 +2970,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -3114,6 +2977,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -3122,24 +2986,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -3169,7 +3018,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -3399,9 +3248,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -3409,6 +3255,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -3417,24 +3264,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -3464,7 +3296,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -3694,9 +3526,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -3704,6 +3533,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -3712,24 +3542,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -3759,7 +3574,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -3989,9 +3804,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -3999,6 +3811,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -4007,24 +3820,9 @@ export const Cofe = () => {
           </div>
         </div>
         <div className="col-lg-3 mb-4 col-md-4 col-12">
-          <div className="p-3 bg-white rounded-4" onClick={() => {navigate("/about-product")}}>
+          <div className="p-3 bg-white rounded-4">
             <div className="d-flex align-items-center justify-content-between">
               <div>
-                {/* <span
-                    className="p-3"
-                    style={{ background: "#F9B300", borderRadius: "50%" }}
-                  >
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      width="24"
-                      height="24"
-                      fill="currentColor"
-                      class="bi bi-percent text-black"
-                      viewBox="0 0 16 16"
-                    >
-                      <path d="M13.442 2.558a.625.625 0 0 1 0 .884l-10 10a.625.625 0 1 1-.884-.884l10-10a.625.625 0 0 1 .884 0M4.5 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5m7 6a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3m0 1a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5" />
-                    </svg>
-                  </span> */}
                 <p style={{ color: "#F9B300" }} className="fw-bold">
                   Скидки
                 </p>
@@ -4054,7 +3852,7 @@ export const Cofe = () => {
               </div>
             </div>
 
-            <div className="d-flex align-items-center gap-3">
+            <div style={{cursor:"pointer"}} onClick={() => {navigate("/about-product")}} className="d-flex align-items-center gap-3">
               <div>
                 <img className="w-100" src={image5} alt="#" />
               </div>
@@ -4284,9 +4082,6 @@ export const Cofe = () => {
               <p style={{ color: "#222222" }}>
                 Свежеобжаренный кофе - описание товара, вкус, аромат
               </p>
-              {/* <h3 className="" style={{ color: "#C6C6C6" }}>
-                  350 ₽
-                </h3> */}
               <div className="d-flex align-items-center justify-content-between">
                 <h3 className="fw-bold" style={{ color: "#222222" }}>
                   250 ₽
@@ -4294,6 +4089,7 @@ export const Cofe = () => {
                 <button
                   style={{ background: "#F9B300" }}
                   className="btn fw-bold text-white"
+                  onClick={()=>{navigate("/basket")}} 
                 >
                   В корзину
                 </button>
@@ -4301,7 +4097,6 @@ export const Cofe = () => {
             </div>
           </div>
         </div>
-        
       </div>
       <div className="bg-white mt-5 pt-5">
           <div className="container-fluid mx-auto">
