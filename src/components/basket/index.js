@@ -62,7 +62,7 @@ export const Basket = () => {
           </div>
         </div>
       ),
-      address: "270 ₽ ",
+      address: `${count * 270} $`,
       quantity: (
         <div
           style={{
@@ -80,7 +80,7 @@ export const Basket = () => {
         </div>
       ),
       sale: "27 ₽ ",
-      itogo: "243 ₽ ",
+      itogo: `${count * 270 - 27} $`,
     },
     {
       key: "2",
@@ -108,7 +108,7 @@ export const Basket = () => {
           </div>
         </div>
       ),
-      address: "270 ₽ ",
+      address: `${count2 * 270} $`,
       quantity: (
         <div
           style={{
@@ -121,12 +121,12 @@ export const Basket = () => {
           className="d-flex align-items-center gap-3 rounded"
         >
           <button onClick={() =>{minus2()}} className="btn rounded-0 border-0">-</button>
-          <span >{count}</span>
+          <span >{count2}</span>
           <button onClick={() =>{plus2()}} className="btn rounded-0 border-0">+</button>
         </div>
       ),
       sale: "27 ₽ ",
-      itogo: "243 ₽ ",
+      itogo: `${count2   * 270 - 27} $`,
     },
   ];
 
