@@ -64,7 +64,7 @@ export const HomePage = () => {
             </a>
           </div>
         </div>
-        <div className="col-lg-6  d-lg-block d-md-block d-none">
+        <div className="col-lg-6  d-lg-block  d-none">
           <div style={{ position: "relative" }}>
             <img
               style={{ zIndex: 1, position: "absolute" }}
@@ -85,8 +85,8 @@ export const HomePage = () => {
       <div id="catalog" className="container-fluid mx-auto mt-5 pt-5">
         <h1 className="fw-bold my-5">Каталоги нашей продукции</h1>
         <div className="row mb-5">
-          <div className="col-lg-3 mb-4">
-            <div
+          <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
+            <div 
               style={{
                 background: "#FFFFFF",
                 boxShadow: "0px 0px 30px 0px #92929233",
@@ -107,7 +107,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3 mb-4">
+          <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -129,7 +129,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3 mb-4">
+          <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               style={{
                 background: "#FFFFFF",
@@ -155,7 +155,7 @@ export const HomePage = () => {
               </button>
             </div>
           </div>
-          <div className="col-lg-3 mb-4">
+          <div className="col-lg-3 col-md-4 col-sm-6 col-12 mb-4">
             <div
               style={{
                 background: "#FFFFFF",

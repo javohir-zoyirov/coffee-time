@@ -10,8 +10,31 @@ import { Navbar } from "../navbar";
 
 export const Basket = () => {
   const navigate = useNavigate();
-  const [click, setClick] = useState(1);
-  const [navbarIcon, setNavbarIcon] = useState("");
+  const [count, setCount] = useState(1);
+  const [count2, setCount2] = useState(1);
+ const [radio, setRadio] = useState('');
+ console.log(radio,"radio");
+ 
+ const plus = () => {
+  setCount(count + 1);
+ }
+ const minus = () => {
+  if (count>1) {
+   return  setCount(count-1);
+  } else {
+   return count;
+  }
+ }
+ const plus2 = () => {
+  setCount2(count2 + 1);
+ }
+ const minus2 = () => {
+  if (count>1) {
+   return  setCount2(count2-1);
+  } else {
+   return count2;
+  }
+ }
   const dataSource = [
     {
       key: "1",
@@ -51,9 +74,9 @@ export const Basket = () => {
           }}
           className="d-flex align-items-center gap-3 rounded"
         >
-          <button className="btn rounded-0 border-0">-</button>
-          <span>15</span>
-          <button className="btn rounded-0 border-0">+</button>
+          <button onClick={() => {minus()}} className="btn rounded-0 border-0">-</button>
+          <span>{count}</span>
+          <button onClick={() => {plus()}} className="btn rounded-0 border-0">+</button>
         </div>
       ),
       sale: "27 ₽ ",
@@ -97,9 +120,9 @@ export const Basket = () => {
           }}
           className="d-flex align-items-center gap-3 rounded"
         >
-          <button className="btn rounded-0 border-0">-</button>
-          <span>15</span>
-          <button className="btn rounded-0 border-0">+</button>
+          <button onClick={() =>{minus2()}} className="btn rounded-0 border-0">-</button>
+          <span >{count}</span>
+          <button onClick={() =>{plus2()}} className="btn rounded-0 border-0">+</button>
         </div>
       ),
       sale: "27 ₽ ",

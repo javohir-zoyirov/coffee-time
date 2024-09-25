@@ -20,8 +20,20 @@ import { Rate } from "antd";
 import { Navbar } from "../navbar";
 export const AboutProduct = () => {
   const navigate = useNavigate();
-  const [click, setClick] = useState(1);
-  const [navbarIcon, setNavbarIcon] = useState("");
+ const [count, setCount] = useState(1);
+ const [radio, setRadio] = useState('');
+ console.log(radio,"radio");
+ 
+ const plus = () => {
+  setCount(count + 1);
+ }
+ const minus = () => {
+  if (count>1) {
+   return  setCount(count-1);
+  } else {
+   return count;
+  }
+ }
   return (
     <>
      <Navbar/>
@@ -285,36 +297,35 @@ export const AboutProduct = () => {
                 </div>
 
                 <div className="d-flex align-items-center gap-4 mt-5">
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault1"
-                    />
-                    <label
-                      class="form-check-label fw-bold"
-                      for="flexRadioDefault1"
-                    >
-                      250 г.
-                    </label>
-                  </div>
-                  <div class="form-check">
-                    <input
-                      class="form-check-input"
-                      type="radio"
-                      name="flexRadioDefault"
-                      id="flexRadioDefault2"
-                      checked
-                    />
-                    <label
-                      class="form-check-label fw-bold"
-                      for="flexRadioDefault2"
-                    >
-                      1000 г.
-                    </label>
-                  </div>
-                </div>
+  <div className="form-check">
+    <input
+      className="form-check-input"
+      type="radio"
+      name="flexRadioDefault"
+      id="flexRadioDefault1"
+      value="250"
+      onChange={(e) => setRadio(e.target.value)} 
+    />
+    <label className="form-check-label fw-bold" htmlFor="flexRadioDefault1">
+      250 г.
+    </label>
+  </div>
+  <div className="form-check">
+    <input
+      className="form-check-input"
+      type="radio"
+      name="flexRadioDefault"
+      id="flexRadioDefault2"
+      value="1000"
+      defaultChecked
+      onChange={(e) => setRadio(e.target.value)} 
+    />
+    <label className="form-check-label fw-bold" htmlFor="flexRadioDefault2">
+      1000 г.
+    </label>
+  </div>
+</div>
+
 
                 <div className="d-flex align-items-center flex-wrap mt-4 gap-3">
                   <div
@@ -327,15 +338,15 @@ export const AboutProduct = () => {
                     }}
                     className="d-flex align-items-center gap-3 rounded"
                   >
-                    <button className="btn rounded-0 border-0">-</button>
-                    <span>15</span>
-                    <button className="btn rounded-0 border-0">+</button>
+                    <button onClick={()=>{minus()}} className="btn rounded-0 border-0">-</button>
+                    <span>{count}</span>
+                    <button onClick={() => {plus()}} className="btn rounded-0 border-0">+</button>
                   </div>
                   <button
                     style={{ background: "#F9B300" }}
                     className="btn text-white"
                   >
-                    Купить за 250 ₽{" "}
+                    Купить за {radio} ₽{" "}
                   </button>
                 </div>
               </div>
