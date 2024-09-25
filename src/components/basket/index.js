@@ -72,7 +72,7 @@ export const Basket = () => {
             display: "block",
             color: "black",
           }}
-          className="d-flex align-items-center gap-3 rounded"
+          className="d-flex align-items-center justify-content-between gap-3 rounded"
         >
           <button onClick={() => {minus()}} className="btn rounded-0 border-0">-</button>
           <span>{count}</span>
@@ -118,7 +118,7 @@ export const Basket = () => {
             display: "block",
             color: "black",
           }}
-          className="d-flex align-items-center gap-3 rounded"
+          className="d-flex align-items-center  justify-content-between gap-3 rounded"
         >
           <button onClick={() =>{minus2()}} className="btn rounded-0 border-0">-</button>
           <span >{count2}</span>
