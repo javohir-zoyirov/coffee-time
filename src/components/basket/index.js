@@ -29,7 +29,7 @@ export const Basket = () => {
   setCount2(count2 + 1);
  }
  const minus2 = () => {
-  if (count>1) {
+  if (count2>1) {
    return  setCount2(count2-1);
   } else {
    return count2;
